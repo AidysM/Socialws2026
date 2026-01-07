@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 	Design by Free CSS Templates
@@ -7,10 +9,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Genericblue by FCT</title>
+<title>{% block title %}{% endblock title %}</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link href="default.css" rel="stylesheet" type="text/css" />
+<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="outer">
@@ -63,6 +65,8 @@
 		</div>
 		<div id="primaryContentContainer">
 			<div id="primaryContent">
+				{% block content %}
+				{% endblock content %}
 				<h2>Welcome to Sitename.com!</h2>
 				<p><strong>GenericBlue</strong> is a free template from <a href="http://www.freecsstemplates.org/">FCT</a> released under a <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</a>. You're free to use it for both commercial or personal use. I only ask that you link back to <a href="http://www.freecsstemplates.org/">my site</a> in some way. Enjoy :)</p>
 				<p>Suspendisse potenti. Donec nulla est, laoreet quis, pellentesque in, congue in, dui. Nunc rhoncus placerat augue. Donec justo odio, eleifend varius, volutpat venenatis, sagittis ut, orci. Donec nulla est, laoreet quis, pellentesque in, congue in, dui. Nunc rhoncus placerat augue. Donec justo odio, eleifend varius, volutpat venenatis, sagittis ut, orci. Nullam et orci in erat viverra ornare. Nunc pellentesque.</p>
