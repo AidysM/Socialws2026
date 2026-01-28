@@ -374,6 +374,25 @@ files = [
 django = ">=4.2"
 
 [[package]]
+name = "easy-thumbnails"
+version = "2.10.1"
+description = "Easy thumbnails for Django"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "easy_thumbnails-2.10.1-py3-none-any.whl", hash = "sha256:24462d63dd31543ef1585538b2bfefe0db96d3409bb431c70b81548fb2cfc5be"},
+    {file = "easy_thumbnails-2.10.1.tar.gz", hash = "sha256:a50aa5f99387546c35ab5ba1ea9b3cbbc5658e65601cd34949f62137c32c222e"},
+]
+
+[package.dependencies]
+django = ">=4.2"
+pillow = "*"
+
+[package.extras]
+svg = ["reportlab", "svglib"]
+
+[[package]]
 name = "idna"
 version = "3.11"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -854,4 +873,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13"
-content-hash = "f639ceec9f67e1e34f69a33a27da781c7173a7ef510b9952523ef8476a184681"
+content-hash = "48f59c3b387186ce94df91ce469b5e536480e42d3ec689a52778661ddcd6d750"

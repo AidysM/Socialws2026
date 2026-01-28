@@ -61,7 +61,8 @@
 			<li><a href="#" accesskey="2" title="">About Us</a></li>
 			<li><a href="#" accesskey="3" title="">Products</a></li>
 			<li><a href="#" accesskey="4" title="">Services</a></li>
-			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+			<li><a href="{% url 'images:list' %}" accesskey="5" title="">Images</a></li>
+			<li><a href="#" accesskey="6" title="">Contact Us</a></li>
 		</ul>
 	</div>
 	<div id="content">
@@ -178,5 +179,14 @@
 		<p>Copyright &copy; 2026 amsocialws.ru. Designed by <a href="http://www.freecsstemplates.org">FCT</a></p>
 	</div>
 </div>
+<script src="//cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script>
+	const csrftoken = Cookies.get('csrftoken');
+	document.addEventListener('DOMContentLoaded', (event) => {
+		// DOM loaded
+		{% block domready %}
+		{% endblock domready %}
+	})
+</script>
 </body>
 </html>
