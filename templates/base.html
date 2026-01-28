@@ -61,8 +61,10 @@
 			<li><a href="#" accesskey="2" title="">About Us</a></li>
 			<li><a href="#" accesskey="3" title="">Products</a></li>
 			<li><a href="#" accesskey="4" title="">Services</a></li>
-			<li><a href="{% url 'images:list' %}" accesskey="5" title="">Images</a></li>
-			<li><a href="#" accesskey="6" title="">Contact Us</a></li>
+			<li {% if section == 'people' %}class='selected'{% endif %}>
+				<a href="{% url 'user_list' %}" accesskey="5" title="">People</a></li>
+			<li><a href="{% url 'images:list' %}" accesskey="6" title="">Images</a></li>
+			<li><a href="#" accesskey="7" title="">Contact Us</a></li>
 		</ul>
 	</div>
 	<div id="content">
